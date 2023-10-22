@@ -1,5 +1,9 @@
 plugins {
     id 'application'
+    id 'idea'
+    id 'java'
+    id 'jacoco'
+    id 'checkstyle'
     id 'com.github.johnrengelman.shadow' version '7.1.0'
 }
 
@@ -25,6 +29,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+    minHeapSize = "1024m"
+    maxHeapSize = "4096m"
 }
 
 jar {
@@ -32,6 +38,12 @@ jar {
         attributes(
                 'Main-Class': 'org.example.Main'
         )
+    }
+}
+
+jacocoTestReport {
+    reports {
+        xml.required = true
     }
 }
 
