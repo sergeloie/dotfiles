@@ -5,6 +5,7 @@ plugins {
     java
     jacoco
     checkstyle
+    id("io.freefair.lombok") version "8.4"
     id("se.patrikerdes.use-latest-versions") version "0.2.18"
     id("com.github.ben-manes.versions") version "0.49.0"
     id("com.github.johnrengelman.shadow") version "8.1.1"
@@ -62,6 +63,6 @@ tasks.jacocoTestReport {
     }
 }
 
-jacoco {
-    reportsDirectory = layout.buildDirectory.dir("customJacocoReportDir")
-}
+//jacoco {
+//    reportsDirectory = layout.buildDirectory.dir("customJacocoReportDir")
+//}
