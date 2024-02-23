@@ -1,0 +1,27 @@
+[versions]
+jackson-version = "2.16.1"
+junit-version = "5.10.2"
+lombok-version = "1.18.30"
+
+[libraries]
+jackson-annotations = { module = "com.fasterxml.jackson.core:jackson-annotations", version.ref = "jackson-version" }
+jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "jackson-version" }
+jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson-version" }
+junitBom = { module = "org.junit:junit-bom", version.ref = "junit-version" }
+jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-version" }
+lombok = { module = "org.projectlombok:lombok", version.ref = "lombok-version" }
+
+[bundles]
+jacksonBundle = [
+    "jackson-annotations",
+    "jackson-core",
+    "jackson-databind",
+]
+
+
+[plugins]
+benManesVersionsPlugin = "com.github.ben-manes.versions:0.51.0"
+freefairLombokPLugin = "io.freefair.lombok:8.6"
+johnrengelmanShadowPlugin = "com.github.johnrengelman.shadow:8.1.1"
+littlerobotsVersionCatalogUpdatePlugin = "nl.littlerobots.version-catalog-update:0.8.4"
+patrikerdesUseLatestVersionsPlugin = "se.patrikerdes.use-latest-versions:0.2.18"
