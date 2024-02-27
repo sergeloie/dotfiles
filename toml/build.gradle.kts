@@ -18,9 +18,13 @@ repositories {
 dependencies {
     testImplementation(platform(libs.junitBom))
     testImplementation(libs.jupiter)
+    testImplementation(libs.spring.boot.starter.test)
     compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
     implementation(libs.bundles.jacksonBundle)
+    implementation(libs.bundles.springBundle)
+
+    testRuntimeOnly(libs.junit.platform.launcher)
 }
 
 tasks.test {
