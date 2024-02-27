@@ -44,3 +44,5 @@ freefairLombokPLugin = "io.freefair.lombok:8.6"
 johnrengelmanShadowPlugin = "com.github.johnrengelman.shadow:8.1.1"
 littlerobotsVersionCatalogUpdatePlugin = "nl.littlerobots.version-catalog-update:0.8.4"
 patrikerdesUseLatestVersionsPlugin = "se.patrikerdes.use-latest-versions:0.2.18"
+springFrameworkPlugin = { id = "org.springframework.boot", version.ref = "spring-version" }
+springDependencyManagementPlugin = "io.spring.dependency-management:1.1.4"
