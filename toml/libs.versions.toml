@@ -1,21 +1,40 @@
 [versions]
 jackson-version = "2.16.1"
 junit-version = "5.10.2"
+junit-plarform-version = "1.10.2"
 lombok-version = "1.18.30"
+spring-version = "3.2.3"
 
 [libraries]
 jackson-annotations = { module = "com.fasterxml.jackson.core:jackson-annotations", version.ref = "jackson-version" }
 jackson-core = { module = "com.fasterxml.jackson.core:jackson-core", version.ref = "jackson-version" }
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind", version.ref = "jackson-version" }
+
 junitBom = { module = "org.junit:junit-bom", version.ref = "junit-version" }
 jupiter = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit-version" }
+
+junit-platform-launcher = { module = "org.junit.platform:junit-platform-launcher", version.ref = "junit-plarform-version"}
+
 lombok = { module = "org.projectlombok:lombok", version.ref = "lombok-version" }
+
+spring-boot-devtools = { module = "org.springframework.boot:spring-boot-devtools", version.ref = "spring-version"}
+spring-boot-starter = { module = "org.springframework.boot:spring-boot-starter", version.ref = "spring-version"}
+spring-boot-starter-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-version"}
+
+spring-boot-starter-test = { module = "org.springframework.boot:spring-boot-starter-test", version.ref = "spring-version"}
+
 
 [bundles]
 jacksonBundle = [
     "jackson-annotations",
     "jackson-core",
     "jackson-databind",
+]
+
+springBundle = [
+    "spring-boot-devtools",
+    "spring-boot-starter",
+    "spring-boot-starter-web"
 ]
 
 
