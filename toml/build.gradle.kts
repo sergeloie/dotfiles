@@ -23,14 +23,17 @@ repositories {
 }
 
 dependencies {
-    // Use JUnit Jupiter for testing.
+//  Use JUnit Jupiter for testing.
+    implementation(libs.bundles.springStudy)
+    testImplementation(libs.bundles.junitBundle)
     testImplementation(platform(libs.junitBom))
-    testImplementation(libs.jupiter)
+
+//  testImplementation(libs.jupiter)
     testImplementation(libs.spring.boot.starter.test)
     compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
     implementation(libs.bundles.jacksonBundle)
-    implementation(libs.bundles.springBundle)
+//  implementation(libs.bundles.springBundle)
 
     testRuntimeOnly(libs.junit.platform.launcher)
 }
